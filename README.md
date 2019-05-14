@@ -1,3 +1,8 @@
+### Modifications Made ###
+This repo is a fork of the Image Colorization project of Richard Zhang made on 2019-May-14. As part of a school assignment and to gain a better of understanding of deep neural networks, my team has made the following changes to the existing code:
+1) We made an attempt to rewrite the loss function in python instead of C++. We ultimately abandoned the attempt out of concern there may be integration problems with Caffe and performance issues overall. That said, this attempt gave us a good understanding of how the loss function was constructed, which will guide some of out other modifications.
+2) In the paper, they stated they used soft-encoding, choosing the 5 nearest bins of a particular pixel and giving them a weighted probability; however, in the code we saw that they used the 10 nearest neighbors instead. We ran experiments with different numbers of nearest neighbors for soft encoding to see how it affects results.
+
 <!--<h3><b>Colorful Image Colorization</b></h3>-->
 ## <b>Colorful Image Colorization</b> [[Project Page]](http://richzhang.github.io/colorization/) <br>
 [Richard Zhang](https://richzhang.github.io/), [Phillip Isola](http://web.mit.edu/phillipi/), [Alexei A. Efros](http://www.eecs.berkeley.edu/~efros/). In [ECCV, 2016](http://arxiv.org/pdf/1603.08511.pdf).
